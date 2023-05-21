@@ -3,4 +3,4 @@ const fullImageUrl = (backdropPath, width = 'w500') => {
 }
 
 
-export {fullImageUrl};
+export { fullImageUrl };

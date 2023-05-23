@@ -9,5 +9,6 @@
       <component :is="Component"> </component>
     </transition>
   </router-view>
+  
 </template>
 <script setup></script>

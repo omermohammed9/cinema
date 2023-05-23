@@ -79,37 +79,3 @@ onMounted(() => {
   fetchMovieVideos();
 });
 </script>
-
-<!-- <script setup>
-import axios from "@/http";
-import { useRoute, useRouter } from "vue-router";
-import { onMounted, ref } from "vue";
-import Movie from "@/components/Movie.vue";
-
-const props = defineProps(["id"]);
-const details = ref();
-const videos = ref([]);
-const route = useRoute();
-const router = useRouter();
-
-const fetchMovieDetails = async () => {
-    const {data} = await axios.get(`/movie/${props.id}`);
-    details.value = data
-
-}
-
-
-
-
-const fetchMovieVideos = async () => {
-    const {data} = await axios.get(`/movie/${props.id}/videos`)
-    videos.value = data.results;
-}
-const goBack = () => {
-    router.back();
-}
-onMounted(() => {
-  fetchMovieDetails();
-  fetchMovieVideos();
-});
-</script> -->

@@ -9,18 +9,18 @@
         class="w-full p-2 rounded-lg text-black"
         type="text"
       />
-      <div class="flex gap-4 mt-4">
+      <div class="flex gap-4 mt-4 justify-between">
         <button
           @click="timeWindow = 'week'"
-          class="bg-indigo-500 rounded-lg px-2 py-1"
-          :class="{ 'bg-rose-700': timeWindow === 'week' }"
+          class="bg-slate-800 rounded-lg px-2 py-1"
+          :class="{ 'bg-blue-700': timeWindow === 'week' }"
         >
           Week
         </button>
         <button
           @click="timeWindow = 'day'"
-          class="bg-indigo-500 rounded-lg px-2 py-1"
-          :class="{ 'bg-rose-700': timeWindow == 'day' }"
+          class="bg-slate-800 rounded-lg px-2 py-1"
+          :class="{ 'bg-blue-700': timeWindow == 'day' }"
         >
           Day
         </button>
@@ -65,7 +65,7 @@
     </div>
     <div class="w-3/4 grid grid-cols-4 gap-4 items-stretch">
       <Movie v-if="!isLoadingMovies" v-for="movie in movies" :movie="movie" />
-      <div v-else class="col-span-4 flex justify-center">
+      <div v-else class="col-span-4 flex justify-center ">
         <span>Loading Movies...</span>
       </div>
     </div>

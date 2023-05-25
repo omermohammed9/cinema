@@ -1,12 +1,9 @@
 <template>
-  
-  
   <div class="flex justify-center items-center h-screen">
     <div id="player"></div>
     <a @click="goBack" class="text-white font-bold">Back</a>
   </div>
 </template>
-
 
 <script setup>
 import { onMounted, ref } from "vue";

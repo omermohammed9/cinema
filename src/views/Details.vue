@@ -74,6 +74,7 @@ const fetchMovieVideos = async () => {
 const goBack = () => {
   router.back();
 };
+
 onMounted(() => {
   fetchMovieDetails();
   fetchMovieVideos();

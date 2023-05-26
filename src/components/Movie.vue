@@ -4,10 +4,22 @@
       <div class="w-full overflow-hidden rounded-t-lg">
         <img class="w-full transition hover:scale-150" :src="imageURL" alt="" />
       </div>
-      <div class="p-2 flex flex-col">
+      <div class="p-2 flex flex-col justify-between">
         <h1 class="text-xl font-bold">{{ movie.title }}</h1>
-        <div>
-          <span>
+        <div class="flex flex-col space-y-3">
+          <span class="font-bold"
+            >Rating: {{ movie.vote_average.toFixed(1) * 10 }}%
+          </span>
+
+          <span class="font-bold">
+            Release Date: {{ formatDate(movie.release_date) }}</span
+          >
+          <router-link :to="{ name: 'Details', params: { id: movie.id } }">
+            <span class="font-bold cursor-pointer hover:underline">
+              More Details
+            </span>
+          </router-link>
+          <!-- <span>
             {{ overview }}
           </span>
           <a
@@ -17,7 +29,7 @@
             href="#"
           >
             Read more...
-          </a>
+          </a> -->
         </div>
       </div>
     </router-link>
@@ -41,4 +53,9 @@ const overview = computed(() => {
   }
   return props.movie.overview.substr(0, 80) + "...";
 });
+
+const formatDate = (date) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(date).toLocaleDateString(undefined, options);
+};
 </script>

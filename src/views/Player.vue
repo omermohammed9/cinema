@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center items-center h-screen">
+  <div class="flex flex-col justify-center items-center h-screen">
+    <a @click="goBack" class="text-white font-bold cursor-pointer ">Back</a>
     <div id="player"></div>
-    <a @click="goBack" class="text-white font-bold">Back</a>
   </div>
 </template>
 

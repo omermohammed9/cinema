@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center h-screen">
-    <a @click="goBack" class="text-white font-bold cursor-pointer ">Back</a>
+    <a @click="goBack" class="text-white font-bold cursor-pointer">Back</a>
     <div id="player"></div>
   </div>
 </template>
